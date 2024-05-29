@@ -8,7 +8,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #CCCCFF; /* Periwinkle blue */
         }
 
         .navbar {
@@ -45,14 +45,15 @@
         }
 
         .gallery {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+            gap: 20px;
+            justify-items: center;
             padding: 50px;
         }
 
         .artwork {
-            margin: 10px;
             perspective: 1000px;
             width: 300px;
             height: 300px;
@@ -106,6 +107,7 @@
 
     <div class="gallery">
         <!-- Artwork section -->
+        <!-- Repeat this block for each artwork -->
         <div class="artwork">
             <img src="artwork1.jpg" alt="Artwork 1">
             <div class="desc">
@@ -113,6 +115,7 @@
                 <p>Description for Artwork 1</p>
             </div>
         </div>
+        <!-- End of block -->
 
         <!-- Add more artwork divs here -->
     </div>
