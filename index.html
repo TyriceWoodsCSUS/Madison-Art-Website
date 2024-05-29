@@ -2,8 +2,125 @@
 <html>
 <head>
     <title>Madison's Art Website</title>
-    <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* CSS code */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #CCCCFF; /* Periwinkle blue */
+        }
+
+        .navbar {
+            background-color: #333;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .navbar ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+
+        .navbar ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .hero {
+            height: 50vh;
+            background-image: url('hero.jpg');
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero h1 {
+            text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; /* This adds a black stroke */
+            animation: fadeInDown 2s ease-in-out; /* This makes the text fade in from the top */
+        }
+    
+       
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+            gap: 20px;
+            justify-items: center;
+            padding: 50px;
+        }
+
+        .artwork {
+            perspective: 1000px;
+            width: 300px;
+            height: 300px;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 1s;
+        }
+
+        .artwork:hover img {
+            transform: scale(1.25); /* This increases the size of the image by 125% on hover */
+        }
+        
+        .artwork:active img {
+            transform: rotateY(180deg); /* This flips the image on click */
+        }
+
+        .artwork img, .artwork .desc {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            backface-visibility: hidden;
+        }
+
+        .artwork img {
+            cursor: pointer;
+            border: 2px solid black; /* This adds a black border */
+        }
+
+        .artwork .desc {
+            transform: rotateY(180deg);
+            padding: 10px;
+            color: white;
+            background-color: rgba(0,0,0,0.8);
+            text-align: center;
+            font-family: 'Roboto', sans-serif; /* This is the fancy font */
+        }
+        
+        .artwork .desc .name {
+            font-size: 20px;
+            font-weight: 700; /* This makes the name bold */
+        }
+
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+        }
+
+        @keyframes fadeInDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="navbar">
