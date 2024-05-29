@@ -26,6 +26,14 @@ p {
     animation: fadeInFromTop 2s ease-in-out;
 }
 
+.main-button {
+    margin-bottom: 20px;
+}
+
+.about-link {
+    margin-top: 20px;
+}
+
 /* Style for the main container used in index */
 @keyframes fadeInFromTop {
     0% {
