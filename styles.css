@@ -1,66 +1,113 @@
-/* Style for the body */
+/* CSS code */
 body {
-    background-color: #f0f0f0;
     font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    margin: 0;
+    padding: 0;
+    background-color: #CCCCFF; /* Periwinkle blue */
 }
 
-/* Style for header 1 */
-h1 {
-    color: #333;
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
     text-align: center;
-    /*animation: fadeInFromTop 2s ease-in-out; */
 }
 
-/* Style for the main container */
-p {
-    color: #666;
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
 }
 
-/* Style for the main container used in index */
-.main-title {
-    color: #333;
-    text-align: center;
-    animation: fadeInFromTop 2s ease-in-out;
+.navbar ul li {
+    display: inline;
+    margin: 0 20px;
 }
 
-.main-button {
-    padding-bottom: 20px;
-}
-
-.about-link {
-    padding-top: 20px;
-}
-
-.test-button {
-    /* Basic button styles */
-    display: inline-block;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    background-color: #008CBA; /* Change this to your preferred color */
-    color: white; /* Change this to your preferred color */
-    text-align: center;
+.navbar ul li a {
+    color: #fff;
     text-decoration: none;
-    font-size: 16px;
-    transition: all 0.5s; /* This allows the button to animate smoothly when styles are changed */
+}
+
+.hero {
+    height: 50vh;
+    background-image: url('hero.jpg');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero h1 {
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; /* This adds a black stroke */
+    animation: fadeInDown 2s ease-in-out; /* This makes the text fade in from the top */
+}
+
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 20px;
+    justify-items: center;
+    padding: 50px;
+}
+
+.artwork {
+    perspective: 1000px;
+    width: 300px;
+    height: 300px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+
+.artwork:hover img {
+    transform: scale(1.25); /* This increases the size of the image by 125% on hover */
+}
+
+.artwork:active img {
+    transform: rotateY(180deg); /* This flips the image on click */
+}
+
+.artwork img, .artwork .desc {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.artwork img {
     cursor: pointer;
-    position: relative; /* This allows you to move the button around the page using top, right, bottom, and left properties */
+    border: 2px solid black; /* This adds a black border */
 }
 
-.test-button:hover {
-    /* Styles for when the button is hovered over */
-    background-color: #4CAF50 !important; /* Change this to your preferred color */
-    color: white !important; /* Change this to your preferred color */
+.artwork .desc {
+    transform: rotateY(180deg);
+    padding: 10px;
+    color: white;
+    background-color: rgba(0,0,0,0.8);
+    text-align: center;
+    font-family: 'Roboto', sans-serif; /* This is the fancy font */
 }
 
-/* Style for the main container used in index */
-@keyframes fadeInFromTop {
+.artwork .desc .name {
+    font-size: 20px;
+    font-weight: 700; /* This makes the name bold */
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+}
+
+@keyframes fadeInDown {
     0% {
         opacity: 0;
-        transform: translateY(-50px);
+        transform: translateY(-20px);
     }
     100% {
         opacity: 1;
