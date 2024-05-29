@@ -52,8 +52,8 @@ p {
 
 .test-button:hover {
     /* Styles for when the button is hovered over */
-    background-color: #4CAF50; /* Change this to your preferred color */
-    color: white; /* Change this to your preferred color */
+    background-color: #4CAF50 !important; /* Change this to your preferred color */
+    color: white !important; /* Change this to your preferred color */
 }
 
 /* Style for the main container used in index */
