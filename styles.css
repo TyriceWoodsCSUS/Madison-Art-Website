@@ -1,3 +1,4 @@
+/* Style for the body */
 body {
     background-color: #f0f0f0;
     font-family: Arial, sans-serif;
@@ -6,16 +7,26 @@ body {
     align-items: center;
 }
 
+/* Style for header 1 */
 h1 {
+    color: #333;
+    text-align: center;
+    /*animation: fadeInFromTop 2s ease-in-out; */
+}
+
+/* Style for the main container */
+p {
+    color: #666;
+}
+
+/* Style for the main container used in index */
+.main-title {
     color: #333;
     text-align: center;
     animation: fadeInFromTop 2s ease-in-out;
 }
 
-p {
-    color: #666;
-}
-
+/* Style for the main container used in index */
 @keyframes fadeInFromTop {
     0% {
         opacity: 0;
