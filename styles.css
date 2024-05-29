@@ -27,13 +27,11 @@ p {
 }
 
 .main-button {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    padding-bottom: 20px;
 }
 
 .about-link {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    padding-top: 20px;
 }
 
 /* Style for the main container used in index */
