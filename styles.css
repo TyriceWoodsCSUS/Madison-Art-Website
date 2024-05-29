@@ -34,6 +34,28 @@ p {
     padding-top: 20px;
 }
 
+.test-button {
+    /* Basic button styles */
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #008CBA; /* Change this to your preferred color */
+    color: white; /* Change this to your preferred color */
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    transition: all 0.5s; /* This allows the button to animate smoothly when styles are changed */
+    cursor: pointer;
+    position: relative; /* This allows you to move the button around the page using top, right, bottom, and left properties */
+}
+
+.test-button:hover {
+    /* Styles for when the button is hovered over */
+    background-color: #4CAF50; /* Change this to your preferred color */
+    color: white; /* Change this to your preferred color */
+}
+
 /* Style for the main container used in index */
 @keyframes fadeInFromTop {
     0% {
