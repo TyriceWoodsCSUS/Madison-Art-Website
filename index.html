@@ -3,14 +3,104 @@
 <head>
     <title>Madison's Art Website</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        /* CSS code */
+        .artwork {
+            perspective: 1000px;
+            position: relative;
+            width: 200px;
+            height: 200px;
+            margin: 10px;
+        }
+
+        .artwork img, .artwork .desc {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            transition: transform 1s;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        }
+
+        .artwork img {
+            cursor: pointer;
+        }
+
+        .artwork img:hover {
+            transform: scale(1.1);
+        }
+
+        .artwork:hover .desc {
+            transform: rotateY(180deg);
+        }
+
+        .artwork img, .artwork .desc {
+            backface-visibility: hidden;
+        }
+
+        .artwork .desc {
+            transform: rotateY(180deg);
+            padding: 10px;
+            color: white;
+            background-color: rgba(0,0,0,0.8);
+            text-align: center;
+        }
+
+        .navbar {
+            background-color: #333;
+            color: #fff;
+            padding: 15px;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .navbar ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        .navbar ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    <h1 class="main-title">Welcome to Madison's Website!</h1>
-    <p>This is a quick version of a Website made for Madison's Art by her very caring husband -Tyrice.</p>
-    <p>(I will keep updating this as I go)</p>
-    <button id="clickMe" class="main-button">Pop-up Button</button>
-    <a href="about.html" class="about-link">Learn About Me!</a>
-    <button class="test-button" onclick="window.location.href='test.html'">Test Button</button>
+    <div class="navbar">
+        <ul>
+            <li><a href="about.html">About</a></li>
+            <!-- Add more links here -->
+        </ul>
+    </div>
+
+    <h1>Welcome to Madison's Art Website!</h1>
+
+    <!-- Artwork section -->
+    <div class="artwork">
+        <img src="artwork1.jpg" alt="Artwork 1">
+        <div class="desc">
+            <h3>Artwork 1</h3>
+            <p>Description for Artwork 1</p>
+        </div>
+    </div>
+
+    <!-- Add more artwork divs here -->
+
+    <!-- Footer section -->
+    <div class="footer">
+        <p>Email: madison@example.com</p>
+        <p>Phone: 123-456-7890</p>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
