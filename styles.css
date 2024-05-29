@@ -113,6 +113,10 @@ nav ul li a {
 
 /* Styles for the title */
 header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     text-align: center;
     opacity: 0;
     animation: fadeInDown 2s forwards;
