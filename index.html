@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Madison's Art Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         /* CSS code */
         body {
@@ -62,8 +63,12 @@
             transition: transform 1s;
         }
 
-        .artwork:hover {
-            transform: rotateY(180deg);
+        .artwork:hover img {
+            transform: scale(1.25); /* This increases the size of the image by 125% on hover */
+        }
+        
+        .artwork:active img {
+            transform: rotateY(180deg); /* This flips the image on click */
         }
 
         .artwork img, .artwork .desc {
@@ -75,6 +80,7 @@
 
         .artwork img {
             cursor: pointer;
+            border: 2px solid black; /* This adds a black border */
         }
 
         .artwork .desc {
@@ -83,6 +89,12 @@
             color: white;
             background-color: rgba(0,0,0,0.8);
             text-align: center;
+            font-family: 'Roboto', sans-serif; /* This is the fancy font */
+        }
+        
+        .artwork .desc .name {
+            font-size: 20px;
+            font-weight: 700; /* This makes the name bold */
         }
 
         .footer {
@@ -97,6 +109,7 @@
     <div class="navbar">
         <ul>
             <li><a href="about.html">About</a></li>
+            <li><a href="test.html">Test</a></li>
             <!-- Add more links here -->
         </ul>
     </div>
@@ -111,7 +124,7 @@
         <div class="artwork">
             <img src="Shrek.jpg" alt="Who is this handsome lad?!?!?">
             <div class="desc">
-                <h3>Artwork 1</h3>
+                <h3 class="Handsome Lad">Shrek</h3> <!-- This is the name of the artwork -->
                 <p>This is Madison's favorite man</p>
             </div>
         </div>
