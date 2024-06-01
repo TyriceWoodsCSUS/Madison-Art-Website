@@ -1,0 +1,156 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: black;
+    color: white;
+}
+
+#header {
+    font-size: 3em;
+    font-weight: bold;
+    text-align: center;
+    opacity: 0; /* Make the header initially invisible */
+    animation: fadeInDown 2s ease-out forwards; /* Add this line */
+}
+
+/* Define the fadeInDown animation */
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hamburger-menu {
+    transition: opacity 0.5s ease-in;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 2rem;
+    height: 2rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 10;
+    position: fixed; /* Change this line */
+    top: 3em; /* Adjusted to align with header */
+    left: 5em; /* Change this line */
+}
+
+.hamburger-menu.fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+}
+
+.hamburger-menu div {
+    width: 2rem;
+    height: 0.25rem;
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+    transition: all 0.3s linear;
+    position: relative;
+    transform-origin: 1px;
+}
+
+.nav-links {
+    position: fixed;
+    left: 0;
+    height: 100%;
+    width: 0;
+    overflow-x: hidden;
+    transition: 0.5s;
+    background-color: #111;
+    padding-top: 0px;
+}
+
+.nav-links a {
+    display: block;
+    padding: 1em;
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid #444; /* Add a border to each link */
+    background-color: #222; /* Add a background color to each link */
+    transition: background-color 0.3s; /* Add a transition effect */
+}
+
+.nav-links a:hover {
+    background-color: #333; /* Change the background color when hovered */
+}
+
+.nav-links.active {
+    width: 250px;
+}
+
+.nav-links a, #close-menu {
+    display: block;
+    text-align: left;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    padding: 1em;
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid #444; /* Add a border to each link */
+    background-color: #222; /* Add a background color to each link */
+    transition: background-color 0.3s; /* Add a transition effect */
+    border: none; /* Remove the default button border */
+    font-family: inherit; /* Make the button font the same as the rest of the page */
+    font-size: inherit; /* Make the button font size the same as the rest of the page */
+    cursor: pointer; /* Change the cursor when hovering over the button */
+}
+
+.nav-links a:hover, #close-menu:hover {
+    background-color: #333; /* Change the background color when hovered */
+}
+
+#header, #gallery {
+    transition: 0.5s;
+}
+
+.blur-effect {
+    filter: blur(3px);
+}
+
+.nav-links.active {
+    width: 250px;
+}
+
+.main-content {
+    transition: 0.5s;
+}
+
+.main-content.blur {
+    filter: blur(5px);
+}
+
+#gallery {
+    display: flex;
+    overflow-x: scroll;
+    margin-top: 4em; /* Adjust as needed */
+    width: 100%;
+    height: calc(100vh - 4em); /* Adjust as needed */
+}
+
+.image-container img:first-child {
+    margin-left: 10px;
+}
+
+.image-container {
+    display: flex;
+}
+
+.image-container img {
+    margin-right: 1em;
+    height: 60vh; /* Adjust this value as needed */
+    object-fit: cover;
+    width: auto; /* Keep the original aspect ratio */
+}
