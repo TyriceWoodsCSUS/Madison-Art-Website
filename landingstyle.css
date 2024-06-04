@@ -9,12 +9,26 @@ body {
     color: white;
 }
 
+#fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100; /* Ensure the header is above other content */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: black; /* Add a background color to the fixed header */
+    padding-left: 80px; /* Add space to the left to match the nav links */
+}
+
 #header {
     font-size: 3em;
     font-weight: bold;
-    text-align: center;
+    text-align: left; /* Align the text to the left */
     opacity: 0; /* Make the header initially invisible */
     animation: fadeInDown 2s ease-out forwards; /* Add this line */
+    margin-top: 0px; /* Adjust the top margin */
 }
 
 /* Define the fadeInDown animation */
@@ -29,47 +43,11 @@ body {
     }
 }
 
-.hamburger-menu {
-    transition: opacity 0.5s ease-in;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 2rem;
-    height: 2rem;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    z-index: 10;
-    position: fixed; /* Change this line */
-    top: 3em; /* Adjusted to align with header */
-    left: 5em; /* Change this line */
-}
-
-.hamburger-menu.fade-out {
-    opacity: 0;
-    transition: opacity 0.5s ease-out;
-}
-
-.hamburger-menu div {
-    width: 2rem;
-    height: 0.25rem;
-    background: rgb(255, 255, 255);
-    border-radius: 10px;
-    transition: all 0.3s linear;
-    position: relative;
-    transform-origin: 1px;
-}
-
 .nav-links {
-    position: fixed;
-    left: 0;
-    height: 100%;
-    width: 0;
-    overflow-x: hidden;
-    transition: 0.5s;
-    background-color: #111;
-    padding-top: 0px;
+    display: flex;
+    justify-content: flex-start; /* Align items to the start of the container */
+    gap: 13px; /* Adjust this value as needed */
+    padding-top: 20px; /* Add space to the top */
 }
 
 .nav-links a {
@@ -77,67 +55,26 @@ body {
     padding: 1em;
     color: white;
     text-decoration: none;
-    border-bottom: 1px solid #444; /* Add a border to each link */
-    background-color: #222; /* Add a background color to each link */
     transition: background-color 0.3s; /* Add a transition effect */
+    font-size: 1.0em; /* Adjust this value as needed */
 }
 
 .nav-links a:hover {
     background-color: #333; /* Change the background color when hovered */
 }
 
-.nav-links.active {
-    width: 250px;
-}
-
-.nav-links a, #close-menu {
-    display: block;
-    text-align: left;
-    width: 100%;
-    padding-left: 0;
-    padding-right: 0;
-    padding: 1em;
-    color: white;
-    text-decoration: none;
-    border-bottom: 1px solid #444; /* Add a border to each link */
-    background-color: #222; /* Add a background color to each link */
-    transition: background-color 0.3s; /* Add a transition effect */
-    border: none; /* Remove the default button border */
-    font-family: inherit; /* Make the button font the same as the rest of the page */
-    font-size: inherit; /* Make the button font size the same as the rest of the page */
-    cursor: pointer; /* Change the cursor when hovering over the button */
-}
-
-.nav-links a:hover, #close-menu:hover {
-    background-color: #333; /* Change the background color when hovered */
-}
-
-#header, #gallery {
-    transition: 0.5s;
-}
-
-.blur-effect {
-    filter: blur(3px);
-}
-
-.nav-links.active {
-    width: 250px;
-}
-
-.main-content {
-    transition: 0.5s;
-}
-
-.main-content.blur {
-    filter: blur(5px);
-}
-
 #gallery {
+    margin-top: calc(70px + 3em + 50px); /* Adjust the top margin to account for the fixed header */
     display: flex;
     overflow-x: scroll;
-    margin-top: 4em; /* Adjust as needed */
     width: 100%;
-    height: calc(100vh - 4em); /* Adjust as needed */
+    height: calc(100vh - 70px - 3em - 50px); /* Adjust the height to account for the fixed header */
+    scrollbar-width: none;  /* For Firefox */
+    -ms-overflow-style: none;  /* For Internet Explorer and Edge */
+}
+
+#gallery::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari and Opera */
 }
 
 .image-container img:first-child {
@@ -153,4 +90,5 @@ body {
     height: 60vh; /* Adjust this value as needed */
     object-fit: cover;
     width: auto; /* Keep the original aspect ratio */
+    scroll-snap-align: start; /* Add this line */
 }
