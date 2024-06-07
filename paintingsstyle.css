@@ -1,0 +1,120 @@
+body {
+    font-family: Arial, sans-serif;
+    /* display: flex; */
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: black;
+    color: white;
+}
+
+#fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100; /* Ensure the header is above other content */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: black; /* Add a background color to the fixed header */
+    padding-left: 80px; /* Add space to the left to match the nav links */
+}
+
+#header {
+    font-size: 3em;
+    font-weight: bold;
+    text-align: left; /* Align the text to the left */
+    opacity: 0; /* Make the header initially invisible */
+    animation: fadeInDown 2s ease-out forwards; /* Add this line */
+    margin-top: 0px; /* Adjust the top margin */
+}
+
+/* Define the fadeInDown animation */
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.nav-links {
+    display: flex;
+    justify-content: flex-start; /* Align items to the start of the container */
+    gap: 13px; /* Adjust this value as needed */
+    padding-top: 20px; /* Add space to the top */
+}
+
+.nav-links a {
+    display: block;
+    padding: 1em;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s; /* Add a transition effect */
+    font-size: 1.0em; /* Adjust this value as needed */
+}
+
+.nav-links a:hover {
+    background-color: #333; /* Change the background color when hovered */
+}
+
+/* Update the rule for the gallery title */
+.gallery-title {
+    position: sticky; /* Change from relative to sticky */
+    top: 150px; /* Adjust this value as needed to prevent overlap with other elements */
+    background-color: black; /* Match the background color of the page */
+    color: white; /* Match the text color of the page */
+    padding: 10px 0;
+    padding-bottom: 50px; /* Add this line to create space below the title */
+    text-align: center;
+    z-index: 99; /* Ensure the title is above other content */
+}
+
+.image-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    overflow-x: scroll;
+    width: 100%;
+    height: calc(100vh - 70px - 3em - 200px); /* Adjust the height to account for the fixed header */
+    scrollbar-width: none;  /* For Firefox */
+    -ms-overflow-style: none;  /* For Internet Explorer and Edge */
+    padding-top: 150px; /* Add this line to prevent images from going past the gallery title */
+    scroll-padding-left: 1.5em; /* Add this line to create space for the first image */
+    scroll-snap-type: x mandatory; /* Add this line */
+}
+
+.image-container::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari and Opera */
+}
+
+.image-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-right: 1.5em;
+    scroll-snap-align: start; /* Add this line */
+}
+
+.image-item:first-child {
+    margin-left: 90em; /* Remove the extra margin */
+}
+
+
+/* Update the rule for the image */
+.image-item img {
+    height: 60vh; /* Adjust this value as needed */
+    object-fit: cover;
+    width: auto; /* Keep the original aspect ratio */
+    scroll-snap-align: start; /* Add this line */
+}
+
+/* Update the rule for the image info */
+.image-info {
+    color: #737373; /* Light gray color */
+}

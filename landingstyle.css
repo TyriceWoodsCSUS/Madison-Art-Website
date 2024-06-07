@@ -73,22 +73,36 @@ body {
     -ms-overflow-style: none;  /* For Internet Explorer and Edge */
 }
 
+
 #gallery::-webkit-scrollbar {
     display: none; /* For Chrome, Safari and Opera */
 }
 
-.image-container img:first-child {
+/*.image-container img:first-child {
     margin-left: 10px;
-}
+} */
 
 .image-container {
     display: flex;
+    flex-direction: row;
+    align-items: flex-start;
 }
 
 .image-container img {
-    margin-right: 1em;
     height: 60vh; /* Adjust this value as needed */
     object-fit: cover;
     width: auto; /* Keep the original aspect ratio */
     scroll-snap-align: start; /* Add this line */
 }
+
+.image-container .image-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-right: 1.5em;
+}
+
+.image-container .image-info {
+    color: #737373; /* Light gray color */
+}
+
