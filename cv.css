@@ -1,30 +1,25 @@
-/* Importing external font */
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
-
-/* General styles for the body */
 body {
     font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: auto;
+    height: 100vh; /* Use viewport height instead of auto */
     margin: 0;
     background: black;
     color: white;
 }
 
-/* Styles for the fixed header */
 #fixed-header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 100; /* Ensures the header stays on top of other elements */
+    z-index: 100;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    background: black; /* Sets the background color of the header */
-    padding-left: 80px; /* Adds padding to the left of the header */
+    background: black;
+    padding-left: 5%; /* Use percentage instead of pixels */
 }
 
 /* Styles for the header text */
@@ -49,91 +44,94 @@ body {
     }
 }
 
-/* Styles for the navigation links */
 .nav-links {
     display: flex;
-    justify-content: flex-start; /* Aligns the navigation links to the start of the container */
-    gap: 13px; /* Sets the gap between the navigation links */
-    padding-top: 20px; /* Adds padding to the top of the navigation links */
+    justify-content: flex-start;
+    gap: 1em; /* Use em instead of pixels */
+    padding-top: 2em; /* Use em instead of pixels */
 }
 
-/* Styles for the individual navigation links */
 .nav-links a {
     display: block;
     padding: 1em;
     color: white;
     text-decoration: none;
-    transition: background-color 0.3s; /* Adds a transition effect to the navigation links */
-    font-size: 1.0em; /* Sets the font size of the navigation links */
+    transition: background-color 0.3s;
+    font-size: 1.0em;
 }
 
-/* Styles for the navigation links on hover */
-.nav-links a:hover {
-    background-color: #333; /* Changes the background color of the navigation links on hover */
-}
-
-/* Styles for the CV section */
 #cv {
-    padding: 20px;
-    padding-top: 100px; /* Adds padding to the top of the CV section */
+    padding: 2em; /* Use em instead of pixels */
+    padding-top: 5em; /* Use em instead of pixels */
 }
 
-/* Styles for the preformatted text in the CV section */
 #cv pre {
     font-family: 'Georgia', serif;
     text-align: left;
     color: #898989;
-    line-height: 1.5; /* Increases the line spacing */
-    padding-right: 800px;
-    margin-right: 20px;
+    line-height: 1.5;
+    padding-right: 50%; /* Use percentage instead of pixels */
+    margin-right: 38em; /* Use em instead of pixels */
 }
 
-/* Styles for the h2 elements in the preformatted text */
 #cv pre h2 {
     font-family: 'Dancing Script', cursive;
     font-size: 2.25em;
     color: white;
-    margin-left: 30px; /* Adds margin to the left of the h2 elements */
+    margin-left: .9em; /* Use em instead of pixels */
 }
 
-/* Styles for the h2 elements */
 h2 {
     font-size: 2em;
-    margin-top: 20px;
+    margin-top: 1em; /* Use em instead of pixels */
     color: white;
 }
 
-/* Styles for the h3 elements */
 h3 {
     font-size: 1.5em;
-    margin-top: 10px;
+    margin-top: 1em; /* Use em instead of pixels */
     color: white;
 }
 
-/* Styles for the unordered lists */
 ul {
-    list-style-type: disc; /* Sets the list style type to disc */
-    padding-left: 20px;
+    list-style-type: disc;
+    padding-left: 2em; /* Use em instead of pixels */
 }
 
-/* Styles for the list items */
 ul li {
     color: white;
-    margin-bottom: 10px;
+    margin-bottom: 1em; /* Use em instead of pixels */
 }
 
-/* Media query for screens smaller than 1366px */
-@media only screen and (max-width: 1366px) {
-    /* Adjust styles as needed */
+@media only screen and (max-width: 600px) {
     #cv pre {
-        padding-right: 500px;
+        padding-right: 5%; /* Further reduce the right padding on small screens */
     }
 }
 
-/* Media query for screens smaller than 1800px */
-@media only screen and (max-width: 1800px) {
-    /* Adjust styles as needed */
+@media only screen and (min-width: 601px) and (max-width: 768px) {
     #cv pre {
-        padding-right: 600px;
+        padding-right: 7%; /* Adjust the right padding for larger screens */
     }
 }
+
+@media only screen and (max-width: 600px) {
+    /* Styles for small mobile devices */
+}
+
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+    /* Styles for large mobile devices to small tablets */
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    /* Styles for tablets to small laptops */
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+    /* Styles for laptops to desktops */
+}
+
+@media only screen and (min-width: 1201px) {
+    /* Styles for large desktops */
+}
+
