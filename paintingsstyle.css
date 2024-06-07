@@ -1,6 +1,6 @@
+/* Styles for the body of the page */
 body {
     font-family: Arial, sans-serif;
-    /* display: flex; */
     flex-direction: column;
     align-items: center;
     height: 100vh;
@@ -9,29 +9,31 @@ body {
     color: white;
 }
 
+/* Styles for the fixed header */
 #fixed-header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 100; /* Ensure the header is above other content */
+    z-index: 100; /* Ensures the header is always on top */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    background: black; /* Add a background color to the fixed header */
-    padding-left: 80px; /* Add space to the left to match the nav links */
+    background: black; /* Sets the background color to black */
+    padding-left: 80px; /* Adds padding to the left */
 }
 
+/* Styles for the header text */
 #header {
     font-size: 3em;
     font-weight: bold;
-    text-align: left; /* Align the text to the left */
-    opacity: 0; /* Make the header initially invisible */
-    animation: fadeInDown 2s ease-out forwards; /* Add this line */
-    margin-top: 0px; /* Adjust the top margin */
+    text-align: left; /* Aligns the text to the left */
+    opacity: 0; /* Makes the header initially invisible */
+    animation: fadeInDown 2s ease-out forwards; /* Applies a fade-in animation */
+    margin-top: 0px; /* Removes the top margin */
 }
 
-/* Define the fadeInDown animation */
+/* Defines the keyframes for the fadeInDown animation */
 @keyframes fadeInDown {
     0% {
         opacity: 0;
@@ -43,78 +45,84 @@ body {
     }
 }
 
+/* Styles for the navigation links container */
 .nav-links {
     display: flex;
-    justify-content: flex-start; /* Align items to the start of the container */
-    gap: 13px; /* Adjust this value as needed */
-    padding-top: 20px; /* Add space to the top */
+    justify-content: flex-start; /* Aligns items to the start */
+    gap: 13px; /* Sets a gap between items */
+    padding-top: 20px; /* Adds padding to the top */
 }
 
+/* Styles for the navigation links */
 .nav-links a {
     display: block;
     padding: 1em;
     color: white;
     text-decoration: none;
-    transition: background-color 0.3s; /* Add a transition effect */
-    font-size: 1.0em; /* Adjust this value as needed */
+    transition: background-color 0.3s; /* Adds a transition effect */
+    font-size: 1.0em; /* Sets the font size */
 }
 
+/* Styles for the navigation links on hover */
 .nav-links a:hover {
-    background-color: #333; /* Change the background color when hovered */
+    background-color: #333; /* Changes the background color on hover */
 }
 
-/* Update the rule for the gallery title */
+/* Styles for the gallery title */
 .gallery-title {
-    position: sticky; /* Change from relative to sticky */
-    top: 150px; /* Adjust this value as needed to prevent overlap with other elements */
-    background-color: black; /* Match the background color of the page */
-    color: white; /* Match the text color of the page */
+    position: sticky; /* Makes the title stick to the top of the viewport */
+    top: 150px; /* Sets the distance from the top of the viewport */
+    background-color: black; /* Sets the background color to black */
+    color: white; /* Sets the text color to white */
     padding: 10px 0;
-    padding-bottom: 50px; /* Add this line to create space below the title */
+    padding-bottom: 50px; /* Adds padding to the bottom */
     text-align: center;
-    z-index: 99; /* Ensure the title is above other content */
+    z-index: 99; /* Ensures the title is always on top */
 }
 
+/* Styles for the image container */
 .image-container {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     overflow-x: scroll;
     width: 100%;
-    height: calc(100vh - 70px - 3em - 200px); /* Adjust the height to account for the fixed header */
-    scrollbar-width: none;  /* For Firefox */
-    -ms-overflow-style: none;  /* For Internet Explorer and Edge */
-    padding-top: 150px; /* Add this line to prevent images from going past the gallery title */
-    scroll-padding-left: 1.5em; /* Add this line to create space for the first image */
-    scroll-snap-type: x mandatory; /* Add this line */
+    height: calc(100vh - 70px - 3em - 200px); /* Sets the height to account for the fixed header */
+    scrollbar-width: none;  /* Hides the scrollbar in Firefox */
+    -ms-overflow-style: none;  /* Hides the scrollbar in Internet Explorer and Edge */
+    padding-top: 150px; /* Adds padding to the top */
+    scroll-padding-left: 1.5em; /* Adds padding to the left */
+    scroll-snap-type: x mandatory; /* Enables horizontal scroll snapping */
 }
 
+/* Hides the scrollbar in Chrome, Safari and Opera */
 .image-container::-webkit-scrollbar {
-    display: none; /* For Chrome, Safari and Opera */
+    display: none;
 }
 
+/* Styles for the image item */
 .image-item {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     margin-right: 1.5em;
-    scroll-snap-align: start; /* Add this line */
+    scroll-snap-align: start; /* Aligns the start edge of the item with the start edge of the scroll container */
 }
 
+/* Removes the extra margin for the first image item */
 .image-item:first-child {
-    margin-left: 90em; /* Remove the extra margin */
+    margin-left: 90em;
 }
 
-
-/* Update the rule for the image */
+/* Styles for the image */
 .image-item img {
-    height: 60vh; /* Adjust this value as needed */
+    height: 60vh; /* Sets the height */
     object-fit: cover;
-    width: auto; /* Keep the original aspect ratio */
-    scroll-snap-align: start; /* Add this line */
+    width: auto; /* Keeps the original aspect ratio */
+    scroll-snap-align: start; /* Aligns the start edge of the item with the start edge of the scroll container */
 }
 
-/* Update the rule for the image info */
+/* Styles for the image info */
 .image-info {
-    color: #737373; /* Light gray color */
+    color: #737373; /* Sets the text color to light gray */
 }

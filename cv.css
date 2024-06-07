@@ -1,5 +1,7 @@
+/* Importing external font */
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 
+/* General styles for the body */
 body {
     font-family: Arial, sans-serif;
     display: flex;
@@ -11,29 +13,31 @@ body {
     color: white;
 }
 
+/* Styles for the fixed header */
 #fixed-header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 100; /* Ensure the header is above other content */
+    z-index: 100; /* Ensures the header stays on top of other elements */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    background: black; /* Add a background color to the fixed header */
-    padding-left: 80px; /* Add space to the left to match the nav links */
+    background: black; /* Sets the background color of the header */
+    padding-left: 80px; /* Adds padding to the left of the header */
 }
 
+/* Styles for the header text */
 #header {
     font-size: 3em;
     font-weight: bold;
-    text-align: left; /* Align the text to the left */
-    opacity: 0; /* Make the header initially invisible */
-    animation: fadeInDown 2s ease-out forwards; /* Add this line */
-    margin-top: 0px; /* Adjust the top margin */
+    text-align: left; /* Aligns the header text to the left */
+    opacity: 0; /* Sets the initial opacity of the header to 0 */
+    animation: fadeInDown 2s ease-out forwards; /* Applies an animation to the header */
+    margin-top: 0px; /* Sets the top margin of the header */
 }
 
-/* Define the fadeInDown animation */
+/* Defines the keyframes for the fadeInDown animation */
 @keyframes fadeInDown {
     0% {
         opacity: 0;
@@ -45,74 +49,75 @@ body {
     }
 }
 
+/* Styles for the navigation links */
 .nav-links {
     display: flex;
-    justify-content: flex-start; /* Align items to the start of the container */
-    gap: 13px; /* Adjust this value as needed */
-    padding-top: 20px; /* Add space to the top */
+    justify-content: flex-start; /* Aligns the navigation links to the start of the container */
+    gap: 13px; /* Sets the gap between the navigation links */
+    padding-top: 20px; /* Adds padding to the top of the navigation links */
 }
 
+/* Styles for the individual navigation links */
 .nav-links a {
     display: block;
     padding: 1em;
     color: white;
     text-decoration: none;
-    transition: background-color 0.3s; /* Add a transition effect */
-    font-size: 1.0em; /* Adjust this value as needed */
+    transition: background-color 0.3s; /* Adds a transition effect to the navigation links */
+    font-size: 1.0em; /* Sets the font size of the navigation links */
 }
 
+/* Styles for the navigation links on hover */
 .nav-links a:hover {
-    background-color: #333; /* Change the background color when hovered */
+    background-color: #333; /* Changes the background color of the navigation links on hover */
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background: black;
-    color: white;
-    margin: 0;
-    padding: 0;
-}
-
+/* Styles for the CV section */
 #cv {
     padding: 20px;
-    padding-top: 100px; /* Adjust this value as needed */
+    padding-top: 100px; /* Adds padding to the top of the CV section */
 }
 
+/* Styles for the preformatted text in the CV section */
 #cv pre {
     font-family: 'Georgia', serif;
     text-align: left;
     color: #898989;
-    line-height: 1.5; /* Add this property to increase line spacing */
+    line-height: 1.5; /* Increases the line spacing */
     padding-right: 800px;
     margin-right: 20px;
 }
 
+/* Styles for the h2 elements in the preformatted text */
 #cv pre h2 {
     font-family: 'Dancing Script', cursive;
     font-size: 2.25em;
     color: white;
-    margin-left: 30px; /* Add some left margin */
+    margin-left: 30px; /* Adds margin to the left of the h2 elements */
 }
 
+/* Styles for the h2 elements */
 h2 {
     font-size: 2em;
     margin-top: 20px;
     color: white;
 }
 
+/* Styles for the h3 elements */
 h3 {
     font-size: 1.5em;
     margin-top: 10px;
     color: white;
 }
 
+/* Styles for the unordered lists */
 ul {
-    list-style-type: disc; /* Change this line */
+    list-style-type: disc; /* Sets the list style type to disc */
     padding-left: 20px;
 }
 
+/* Styles for the list items */
 ul li {
     color: white;
     margin-bottom: 10px;
 }
-

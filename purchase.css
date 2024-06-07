@@ -14,24 +14,24 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 100; /* Ensure the header is above other content */
+    z-index: 100; /* Keeps the header on top */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    background: black; /* Add a background color to the fixed header */
-    padding-left: 80px; /* Add space to the left to match the nav links */
+    background: black; /* Header background color */
+    padding-left: 80px; /* Padding to align with nav links */
 }
 
 #header {
     font-size: 3em;
     font-weight: bold;
-    text-align: left; /* Align the text to the left */
-    opacity: 0; /* Make the header initially invisible */
-    animation: fadeInDown 2s ease-out forwards; /* Add this line */
-    margin-top: 0px; /* Adjust the top margin */
+    text-align: left; 
+    opacity: 0; /* Initial state of the header */
+    animation: fadeInDown 2s ease-out forwards; /* Animation for the header */
+    margin-top: 0px; 
 }
 
-/* Define the fadeInDown animation */
+/* Animation keyframes */
 @keyframes fadeInDown {
     0% {
         opacity: 0;
@@ -45,9 +45,9 @@ body {
 
 .nav-links {
     display: flex;
-    justify-content: flex-start; /* Align items to the start of the container */
-    gap: 13px; /* Adjust this value as needed */
-    padding-top: 20px; /* Add space to the top */
+    justify-content: flex-start; 
+    gap: 13px; 
+    padding-top: 20px; 
 }
 
 .nav-links a {
@@ -55,18 +55,18 @@ body {
     padding: 1em;
     color: white;
     text-decoration: none;
-    transition: background-color 0.3s; /* Add a transition effect */
-    font-size: 1.0em; /* Adjust this value as needed */
+    transition: background-color 0.3s; /* Transition for hover effect */
+    font-size: 1.0em; 
 }
 
 .nav-links a:hover {
-    background-color: #333; /* Change the background color when hovered */
+    background-color: #333; /* Hover effect color */
 }
 
 h2 {
-    font-size: 3em; /* Make the text bigger */
-    font-weight: bold; /* Make the text bold */
-    text-align: center; /* Center the text */
-    margin-top: 200px; /* Increase this value to move the text down */
-    font-family: 'Times New Roman'; /* Change the font */
+    font-size: 3em; 
+    font-weight: bold; 
+    text-align: center; 
+    margin-top: 200px; 
+    font-family: 'Times New Roman';
 }

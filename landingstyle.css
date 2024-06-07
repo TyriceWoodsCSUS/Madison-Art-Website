@@ -1,108 +1,114 @@
+/* Styles for the body of the page */
 body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background: black;
-    color: white;
+    font-family: Arial, sans-serif; /* Sets the font for the body */
+    display: flex; /* Uses flexbox for layout */
+    flex-direction: column; /* Stacks items vertically */
+    align-items: center; /* Centers items horizontally */
+    height: 100vh; /* Sets the height to fill the viewport */
+    margin: 0; /* Removes default margin */
+    background: black; /* Sets the background color to black */
+    color: white; /* Sets the text color to white */
 }
 
+/* Styles for the fixed header */
 #fixed-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 100; /* Ensure the header is above other content */
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    background: black; /* Add a background color to the fixed header */
-    padding-left: 80px; /* Add space to the left to match the nav links */
+    position: fixed; /* Fixes the position of the header */
+    top: 0; /* Positions the header at the top */
+    left: 0; /* Positions the header at the left */
+    width: 100%; /* Sets the width to fill the container */
+    z-index: 100; /* Ensures the header is always on top */
+    display: flex; /* Uses flexbox for layout */
+    flex-direction: column; /* Stacks items vertically */
+    align-items: flex-start; /* Aligns items to the start */
+    background: black; /* Sets the background color to black */
+    padding-left: 80px; /* Adds padding to the left */
 }
 
+/* Styles for the header text */
 #header {
-    font-size: 3em;
-    font-weight: bold;
-    text-align: left; /* Align the text to the left */
-    opacity: 0; /* Make the header initially invisible */
-    animation: fadeInDown 2s ease-out forwards; /* Add this line */
-    margin-top: 0px; /* Adjust the top margin */
+    font-size: 3em; /* Sets the font size */
+    font-weight: bold; /* Makes the text bold */
+    text-align: left; /* Aligns the text to the left */
+    opacity: 0; /* Sets the initial opacity to 0 */
+    animation: fadeInDown 2s ease-out forwards; /* Applies a fade-in animation */
+    margin-top: 0px; /* Removes the top margin */
 }
 
-/* Define the fadeInDown animation */
+/* Defines the keyframes for the fadeInDown animation */
 @keyframes fadeInDown {
     0% {
-        opacity: 0;
-        transform: translateY(-20px);
+        opacity: 0; /* Starts with opacity 0 */
+        transform: translateY(-20px); /* Starts 20px above the final position */
     }
     100% {
-        opacity: 1;
-        transform: translateY(0);
+        opacity: 1; /* Ends with opacity 1 */
+        transform: translateY(0); /* Ends at the final position */
     }
 }
 
+/* Styles for the navigation links container */
 .nav-links {
-    display: flex;
-    justify-content: flex-start; /* Align items to the start of the container */
-    gap: 13px; /* Adjust this value as needed */
-    padding-top: 20px; /* Add space to the top */
+    display: flex; /* Uses flexbox for layout */
+    justify-content: flex-start; /* Aligns items to the start */
+    gap: 13px; /* Sets a gap between items */
+    padding-top: 20px; /* Adds padding to the top */
 }
 
+/* Styles for the navigation links */
 .nav-links a {
-    display: block;
-    padding: 1em;
-    color: white;
-    text-decoration: none;
-    transition: background-color 0.3s; /* Add a transition effect */
-    font-size: 1.0em; /* Adjust this value as needed */
+    display: block; /* Displays the links as block elements */
+    padding: 1em; /* Adds padding around the links */
+    color: white; /* Sets the text color to white */
+    text-decoration: none; /* Removes the underline */
+    transition: background-color 0.3s; /* Adds a transition effect */
+    font-size: 1.0em; /* Sets the font size */
 }
 
+/* Styles for the navigation links on hover */
 .nav-links a:hover {
-    background-color: #333; /* Change the background color when hovered */
+    background-color: #333; /* Changes the background color on hover */
 }
 
+/* Styles for the gallery container */
 #gallery {
-    margin-top: calc(70px + 3em + 50px); /* Adjust the top margin to account for the fixed header */
-    display: flex;
-    overflow-x: scroll;
-    width: 100%;
-    height: calc(100vh - 70px - 3em - 50px); /* Adjust the height to account for the fixed header */
-    scrollbar-width: none;  /* For Firefox */
-    -ms-overflow-style: none;  /* For Internet Explorer and Edge */
+    margin-top: calc(70px + 3em + 50px); /* Sets the top margin to account for the fixed header */
+    display: flex; /* Uses flexbox for layout */
+    overflow-x: scroll; /* Allows horizontal scrolling */
+    width: 100%; /* Sets the width to fill the container */
+    height: calc(100vh - 70px - 3em - 50px); /* Sets the height to account for the fixed header */
+    scrollbar-width: none;  /* Hides the scrollbar in Firefox */
+    -ms-overflow-style: none;  /* Hides the scrollbar in Internet Explorer and Edge */
 }
 
-
+/* Hides the scrollbar in Chrome, Safari and Opera */
 #gallery::-webkit-scrollbar {
-    display: none; /* For Chrome, Safari and Opera */
+    display: none;
 }
 
-/*.image-container img:first-child {
-    margin-left: 10px;
-} */
-
+/* Styles for the image container */
 .image-container {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
+    display: flex; /* Uses flexbox for layout */
+    flex-direction: row; /* Arranges items in a row */
+    align-items: flex-start; /* Aligns items to the start */
 }
 
+/* Styles for the image */
 .image-container img {
-    height: 60vh; /* Adjust this value as needed */
-    object-fit: cover;
-    width: auto; /* Keep the original aspect ratio */
-    scroll-snap-align: start; /* Add this line */
+    height: 60vh; /* Sets the height */
+    object-fit: cover; /* Resizes the image to fill the container while maintaining aspect ratio */
+    width: auto; /* Keeps the original aspect ratio */
+    scroll-snap-align: start; /* Aligns the start edge of the item with the start edge of the scroll container */
 }
 
+/* Styles for the image item */
 .image-container .image-item {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    margin-right: 1.5em;
+    display: flex; /* Uses flexbox for layout */
+    flex-direction: column; /* Stacks items vertically */
+    align-items: flex-end; /* Aligns items to the end */
+    margin-right: 1.5em; /* Adds margin to the right */
 }
 
+/* Styles for the image info */
 .image-container .image-info {
-    color: #737373; /* Light gray color */
+    color: #737373; /* Sets the text color to light gray */
 }
-

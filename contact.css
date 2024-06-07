@@ -1,5 +1,4 @@
-
-
+/* Styles for the body */
 body {
     font-family: Arial, sans-serif;
     display: flex;
@@ -11,29 +10,31 @@ body {
     color: white;
 }
 
+/* Styles for the fixed header */
 #fixed-header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 100; /* Ensure the header is above other content */
+    z-index: 100; /* Ensures the header stays on top of other elements */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    background: black; /* Add a background color to the fixed header */
-    padding-left: 80px; /* Add space to the left to match the nav links */
+    background: black; /* Sets the background color of the header */
+    padding-left: 80px; /* Adds padding to the left of the header */
 }
 
+/* Styles for the header text */
 #header {
     font-size: 3em;
     font-weight: bold;
-    text-align: left; /* Align the text to the left */
-    opacity: 0; /* Make the header initially invisible */
-    animation: fadeInDown 2s ease-out forwards; /* Add this line */
-    margin-top: 0px; /* Adjust the top margin */
+    text-align: left; /* Aligns the header text to the left */
+    opacity: 0; /* Sets the initial opacity of the header to 0 */
+    animation: fadeInDown 2s ease-out forwards; /* Applies an animation to the header */
+    margin-top: 0px; /* Sets the top margin of the header */
 }
 
-/* Define the fadeInDown animation */
+/* Defines the keyframes for the fadeInDown animation */
 @keyframes fadeInDown {
     0% {
         opacity: 0;
@@ -45,45 +46,50 @@ body {
     }
 }
 
+/* Styles for the navigation links */
 .nav-links {
     display: flex;
-    justify-content: flex-start; /* Align items to the start of the container */
-    gap: 13px; /* Adjust this value as needed */
-    padding-top: 20px; /* Add space to the top */
+    justify-content: flex-start; /* Aligns the navigation links to the start of the container */
+    gap: 13px; /* Sets the gap between the navigation links */
+    padding-top: 20px; /* Adds padding to the top of the navigation links */
 }
 
+/* Styles for the individual navigation links */
 .nav-links a {
     display: block;
     padding: 1em;
     color: white;
     text-decoration: none;
-    transition: background-color 0.3s; /* Add a transition effect */
-    font-size: 1.0em; /* Adjust this value as needed */
+    transition: background-color 0.3s; /* Adds a transition effect to the navigation links */
+    font-size: 1.0em; /* Sets the font size of the navigation links */
 }
 
+/* Styles for the navigation links on hover */
 .nav-links a:hover {
-    background-color: #333; /* Change the background color when hovered */
+    background-color: #333; /* Changes the background color of the navigation links on hover */
 }
 
-/* Style the email link */
+/* Styles for the email link */
 a[href^="mailto:"] {
-    color: #ffffff; /* Change the color of the link */
-    text-decoration: none; /* Remove the underline */
-    font-family: 'Georgia', serif; /* Change the font */
-    font-size: 1.2em; /* Change the size of the text */
+    color: #ffffff; /* Sets the color of the email link */
+    text-decoration: none; /* Removes the underline from the email link */
+    font-family: 'Georgia', serif; /* Sets the font of the email link */
+    font-size: 1.2em; /* Sets the font size of the email link */
 }
 
-/* Change the color of the link when hovered over */
+/* Styles for the email link on hover */
 a[href^="mailto:"]:hover {
-    color: #6f93ff;
+    color: #6f93ff; /* Changes the color of the email link on hover */
 }
 
+/* Styles for the email text */
 .email-text {
-    color: #D3D3D3; /* Change the color of the text */
-    font-family: 'Playfair Display', serif; /* Change the font */
-    font-size: 1.2em; /* Change the size of the text */
+    color: #D3D3D3; /* Sets the color of the email text */
+    font-family: 'Playfair Display', serif; /* Sets the font of the email text */
+    font-size: 1.2em; /* Sets the font size of the email text */
 }
 
+/* Styles for the Instagram link image */
 a[href^="https://www.instagram.com/"] img {
-    width: 100px; /* Adjust this value as needed */
+    width: 100px; /* Sets the width of the Instagram link image */
 }

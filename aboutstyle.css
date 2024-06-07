@@ -1,16 +1,18 @@
+/* Styles for the about section */
 #about-section {
-    margin-top: calc(70px + 3em + 50px); /* Adjust the top margin to account for the fixed header */
-    display: flex;
-    flex-direction: row; /* Change this from column to row */
-    align-items: start; /* Align items to the start of the flex container */
-    justify-content: flex-start; /* Align items along the horizontal line */
-    gap: 1em; /* Adjust this value as needed */
+    margin-top: calc(70px + 3em + 50px); /* Top margin to avoid overlap with the fixed header */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: row; /* Arrange children in a row */
+    align-items: start; /* Start alignment for better control of child elements */
+    justify-content: flex-start; /* Start alignment for horizontal distribution */
+    gap: 1em; /* Space between child elements */
 }
 
+/* Styles for images in the about section */
 #about-section img {
-    width: 50%; /* Adjust this value as needed */
-    height: auto;
-    object-fit: cover;
-    float: left;
-    margin-left: 80px;
+    width: 50%; /* Half of the parent's width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Cover the entire content box */
+    float: left; /* Float to the left */
+    margin-left: 80px; /* Space from the left edge */
 }
