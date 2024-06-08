@@ -70,8 +70,8 @@ body {
     text-align: left;
     color: #898989;
     line-height: 1.5;
-    padding-right: 50%; 
-    margin-right: 38em; 
+   /* padding-right: 50%;  */
+    margin-right: 69em; 
 }
 
 #cv pre h2 {
@@ -116,7 +116,7 @@ ul li {
     #cv pre {
         font-size: 0.4em; 
         line-height: 1.9;
-        margin-left: 73em;
+        margin-left: 110em;
         margin-top: 1em;
     }
 }
@@ -131,7 +131,7 @@ ul li {
 @media only screen and (min-width: 601px) and (max-width: 768px) {
     #cv pre {
         padding-right: 2%; 
-        margin-left: 60em;
+        margin-left: 100em;
     }
 }
 
@@ -140,7 +140,7 @@ ul li {
     
     #cv pre {
         padding-right: 2%; 
-        margin-left: 55em;
+        margin-left: 80em;
     }
 }
 
