@@ -3,7 +3,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh; /* Use viewport height instead of auto */
+    height: 100vh; 
     margin: 0;
     background: black;
     color: white;
@@ -19,7 +19,7 @@ body {
     flex-direction: column;
     align-items: flex-start;
     background: black;
-    padding-left: 5%; /* Use percentage instead of pixels */
+    padding-left: 5%; 
 }
 
 /* Styles for the header text */
@@ -47,8 +47,8 @@ body {
 .nav-links {
     display: flex;
     justify-content: flex-start;
-    gap: 1em; /* Use em instead of pixels */
-    padding-top: 2em; /* Use em instead of pixels */
+    gap: 1em;
+    padding-top: 2em; 
 }
 
 .nav-links a {
@@ -61,8 +61,8 @@ body {
 }
 
 #cv {
-    padding: 2em; /* Use em instead of pixels */
-    padding-top: 5em; /* Use em instead of pixels */
+    padding: 2em; 
+    padding-top: 5em; 
 }
 
 #cv pre {
@@ -70,77 +70,91 @@ body {
     text-align: left;
     color: #898989;
     line-height: 1.5;
-    padding-right: 50%; /* Use percentage instead of pixels */
-    margin-right: 38em; /* Use em instead of pixels */
+    padding-right: 50%; 
+    margin-right: 38em; 
 }
 
 #cv pre h2 {
     font-family: 'Dancing Script', cursive;
     font-size: 2.25em;
     color: white;
-    margin-left: .9em; /* Use em instead of pixels */
+    margin-left: .9em; 
 }
 
 h2 {
     font-size: 2em;
-    margin-top: 1em; /* Use em instead of pixels */
+    margin-top: 1em; 
     color: white;
 }
 
 h3 {
     font-size: 1.5em;
-    margin-top: 1em; /* Use em instead of pixels */
+    margin-top: 1em; 
     color: white;
 }
 
 ul {
     list-style-type: disc;
-    padding-left: 2em; /* Use em instead of pixels */
+    padding-left: 2em; 
 }
 
 ul li {
     color: white;
-    margin-bottom: 1em; /* Use em instead of pixels */
+    margin-bottom: 1em; 
 }
 
-@media only screen and (max-width: 430px) {
+@media only screen and (max-width: 539px) {
+
+     #header {
+        font-size: 2em;
+    }
+
+    .nav-links {
+        font-size: 0.6em; 
+    }
 
     #cv pre {
-        padding-right: 2%; /* Further reduce the right padding on small screens */
-        margin-left: 80em; /* Further reduce the right margin on small screens */
-        width: auto;
+        font-size: 0.4em; 
+        line-height: 1.9;
+        margin-left: 73em;
+        margin-top: 1em;
     }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 540px) and (max-width: 600px) {
     #cv pre {
-        padding-right: 2%; /* Further reduce the right padding on small screens */
+        padding-right: 2%; 
+        margin-left: 78em;
     }
 }
 
 @media only screen and (min-width: 601px) and (max-width: 768px) {
     #cv pre {
-        padding-right: 7%; /* Adjust the right padding for larger screens */
+        padding-right: 2%; 
+        margin-left: 60em;
     }
-}
-
-@media only screen and (max-width: 600px) {
-    /* Styles for small mobile devices */
-}
-
-@media only screen and (min-width: 601px) and (max-width: 768px) {
-    /* Styles for large mobile devices to small tablets */
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
-    /* Styles for tablets to small laptops */
+    
+    
+    #cv pre {
+        padding-right: 2%; 
+        margin-left: 55em;
+    }
 }
 
 @media only screen and (min-width: 1025px) and (max-width: 1200px) {
-    /* Styles for laptops to desktops */
+    #cv pre {
+        padding-right: 2%; 
+        margin-left: 45em;
+    }
 }
 
 @media only screen and (min-width: 1201px) {
-    /* Styles for large desktops */
+    #cv pre {
+        padding-right: 2%; 
+        margin-left: 35em;
+    }
 }
 

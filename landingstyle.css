@@ -78,6 +78,7 @@ body {
     height: calc(100vh - 70px - 3em - 50px); /* Sets the height to account for the fixed header */
     scrollbar-width: none;  /* Hides the scrollbar in Firefox */
     -ms-overflow-style: none;  /* Hides the scrollbar in Internet Explorer and Edge */
+    padding-left: 2em; /* Adds margin to the left */
 }
 
 /* Hides the scrollbar in Chrome, Safari and Opera */
@@ -112,3 +113,145 @@ body {
 .image-container .image-info {
     color: #737373; /* Sets the text color to light gray */
 }
+
+@media only screen and (max-width: 539px) {
+
+    #fixed-header {
+        padding-right: 50em; 
+        left: -2em;
+    }
+    #header {
+       font-size: 2.5em;
+       text-align: left;
+       margin-left: -20px;
+   }
+
+   .nav-links {
+       font-size: .6em; 
+       padding-right: 2em;
+       margin-left: -20px;
+   }
+
+   #gallery {
+        height: calc(100vh - 70px - 2em - 100px); /* Adjusts the height */
+    }
+
+    .image-container img {
+        height: 30vh; /* Adjusts the height */
+    }
+
+    .image-container .image-info {
+        font-size: 0.7em; /* Adjusts the font size */
+    }
+
+}
+
+@media only screen and (min-width: 540px) and (max-width: 768px) {
+
+    #fixed-header {
+        padding-right: 50em; 
+        left: -2em;
+    }
+    #header {
+       font-size: 2.5em;
+       text-align: left;
+       margin-left: -20px;
+   }
+
+   .nav-links {
+       font-size: .85em; 
+       padding-right: 2em;
+       margin-left: -20px;
+   }
+
+   #gallery {
+        height: calc(100vh - 70px - 2em - 40px); /* Adjusts the height */
+    }
+
+    .image-container img {
+        height: 49vh; /* Adjusts the height */
+    }
+
+    .image-container .image-info {
+        font-size: 1em; /* Adjusts the font size */
+    }
+
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+
+    #fixed-header {
+        padding-right: 50em; 
+        left: -2em;
+    }
+    #header {
+       font-size: 4em;
+       text-align: left;
+       margin-left: -20px;
+   }
+
+   .nav-links {
+       font-size: 1.3em; 
+       padding-right: 2em;
+       margin-left: -20px;
+   }
+
+   #gallery {
+        height: calc(100vh - 70px - 2em - 40px); /* Adjusts the height */
+    }
+
+    .image-container img {
+        height: 43vh; /* Adjusts the height */
+    }
+
+    .image-container .image-info {
+        font-size: 1.3em; /* Adjusts the font size */
+    }
+
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+
+    #fixed-header {
+        padding-right: 50em; 
+        left: -2em;
+    }
+    #header {
+       font-size: 3.3em;
+       text-align: left;
+       margin-left: -20px;
+   }
+
+   .nav-links {
+       font-size: 1.1em; 
+       padding-right: 2em;
+       margin-left: -20px;
+   }
+
+   #gallery {
+        height: calc(100vh - 70px - 2em - 40px); /* Adjusts the height */
+    }
+
+    .image-container img {
+        height: 53vh; /* Adjusts the height */
+    }
+
+    .image-container .image-info {
+        font-size: .6em; /* Adjusts the font size */
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

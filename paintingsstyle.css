@@ -91,7 +91,7 @@ body {
     scrollbar-width: none;  /* Hides the scrollbar in Firefox */
     -ms-overflow-style: none;  /* Hides the scrollbar in Internet Explorer and Edge */
     padding-top: 150px; /* Adds padding to the top */
-    scroll-padding-left: 1.5em; /* Adds padding to the left */
+    scroll-padding-left: 1em; /* Adds padding to the left */
     scroll-snap-type: x mandatory; /* Enables horizontal scroll snapping */
 }
 
@@ -125,4 +125,132 @@ body {
 /* Styles for the image info */
 .image-info {
     color: #737373; /* Sets the text color to light gray */
+}
+
+@media only screen and (max-width: 539px) {
+
+    #fixed-header {
+         padding-right: 50em; 
+         left: -2em;
+    }
+    #header {
+        font-size: 1.5em;
+        text-align: left;
+        margin-left: -20px;
+    }
+    .nav-links {
+        font-size: .58em; 
+        padding-right: 2em;
+        margin-left: -20px;
+    }
+
+    .image-item img {
+        height: 28vh; /* Sets the height */
+    }
+
+    .image-info {
+        font-size: .7em; /* Sets the font size */
+    }
+
+    .gallery-title {
+        font-size: 1em; /* Sets the font size */
+        top: 100px; /* Sets the distance from the top */
+    }
+
+}
+
+@media only screen and (min-width: 540px) and (max-width: 768px) {
+
+    #fixed-header {
+         padding-right: 50em; 
+         left: -2em;
+    }
+    #header {
+        font-size: 2.5em;
+        text-align: left;
+        margin-left: -20px;
+    }
+    .nav-links {
+        font-size: .85em; 
+        padding-right: 2em;
+        margin-left: -20px;
+    }
+
+    .image-item img {
+        height: 47vh; /* Sets the height */
+    }
+
+    .image-info {
+        font-size: 1.1em; /* Sets the font size */
+    }
+
+    .gallery-title {
+        font-size: 1.7em; /* Sets the font size */
+        top: 135px; /* Sets the distance from the top */
+    }
+
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+
+    #fixed-header {
+         padding-right: 50em; 
+         left: -2em;
+    }
+    #header {
+        font-size: 4em;
+        text-align: left;
+        margin-left: -20px;
+    }
+    .nav-links {
+        font-size: 1.3em; 
+        padding-right: 2em;
+        margin-left: -20px;
+    }
+
+    .image-item img {
+        height: 43vh; /* Sets the height */    }
+
+    .image-info {
+        font-size: 1.2em; /* Sets the font size */
+    }
+
+    .gallery-title {
+        font-size: 1.8em; /* Sets the font size */
+        top: 187px; /* Sets the distance from the top */
+        padding-bottom: 150px; /* Adds padding to the bottom */
+    }
+
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+
+    #fixed-header {
+         padding-right: 50em; 
+         left: -2em;
+    }
+    #header {
+        font-size: 3.2em;
+        text-align: left;
+        margin-left: -20px;
+    }
+    .nav-links {
+        font-size: 1.6em; 
+        padding-right: 2em;
+        margin-left: -20px;
+    }
+
+    .image-item img {
+        height: 46vh; /* Sets the height */    }
+
+    .image-info {
+        font-size: 1.5em; /* Sets the font size */
+    }
+
+    .gallery-title {
+        font-size: 3em; /* Sets the font size */
+        top: 187px; /* Sets the distance from the top */
+        padding-bottom: 150px; /* Adds padding to the bottom */
+    }
+
 }
