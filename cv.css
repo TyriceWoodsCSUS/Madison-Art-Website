@@ -103,9 +103,16 @@ ul li {
     margin-bottom: 1em; /* Use em instead of pixels */
 }
 
+@media only screen and (max-width: 430px) {
+    #cv pre {
+        padding-right: 2%; /* Further reduce the right padding on small screens */
+        margin-left: 80em; /* Further reduce the right margin on small screens */
+    }
+}
+
 @media only screen and (max-width: 600px) {
     #cv pre {
-        padding-right: 5%; /* Further reduce the right padding on small screens */
+        padding-right: 2%; /* Further reduce the right padding on small screens */
     }
 }
 
