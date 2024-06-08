@@ -104,9 +104,11 @@ ul li {
 }
 
 @media only screen and (max-width: 430px) {
+
     #cv pre {
         padding-right: 2%; /* Further reduce the right padding on small screens */
         margin-left: 80em; /* Further reduce the right margin on small screens */
+        width: auto;
     }
 }
 
