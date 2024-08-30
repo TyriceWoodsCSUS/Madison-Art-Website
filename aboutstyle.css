@@ -1,20 +1,41 @@
 /* Styles for the about section */
 #about-section {
-    margin-top: calc(70px + 3em + 50px); /* Top margin to avoid overlap with the fixed header */
+    position: relative; /* Ensure the section is positioned relative to its normal position */
+    top: 200px; /* Move the section down by 200px */
     display: flex; /* Use flexbox for layout */
-    flex-direction: row; /* Arrange children in a row */
-    align-items: start; /* Start alignment for better control of child elements */
-    justify-content: flex-start; /* Start alignment for horizontal distribution */
+    flex-direction: column; /* Stack children vertically by default */
+    align-items: center; /* Center align items */
+    justify-content: center; /* Center align items horizontally */
     gap: 1em; /* Space between child elements */
+    padding: 2em;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 2em auto;
 }
 
 /* Styles for images in the about section */
 #about-section img {
-    width: 50%; /* Half of the parent's width */
-    height: auto; /* Maintain aspect ratio */
+    width: 120%; /* Increase the width of the image */
+    height: 500px; /* Increase the height of the image */
     object-fit: cover; /* Cover the entire content box */
-    float: left; /* Float to the left */
-    margin-left: 80px; /* Space from the left edge */
+    object-position: center; /* Center the image within the container */
+    border-radius: 10px; /* Adjust border radius */
+    margin-bottom: -5em; /* Adjust space below the image */
+    transform: scale(0.6); /* Zoom out the image by 40% */
+}
+
+/* Styles for text container in the about section */
+#about-section .text-container {
+    max-width: 600px;
+    text-align: center;
+}
+
+#about-section p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #333;
 }
 
 @media only screen and (max-width: 539px) {
@@ -71,7 +92,22 @@
    }
 
    #about-section {
-       margin-top: 12em; 
+       flex-direction: row; /* Arrange children in a row */
+       align-items: flex-start; /* Align items to the start */
+       text-align: left; /* Align text to the left */
+       top: 200px; /* Move the section down by 200px */
+   }
+
+   #about-section img {
+       margin-right: 2em; /* Space to the right of the image */
+       margin-bottom: 0; /* Remove bottom margin */
+       width: 120%; /* Increase the width of the image */
+       height: 500px; /* Increase the height of the image */
+       transform: scale(0.6); /* Zoom out the image by 40% */
+   }
+
+   #about-section .text-container {
+       max-width: none; /* Remove max-width */
    }
 }
 
@@ -90,5 +126,24 @@
         font-size: .85em; 
         padding-right: 2em;
         margin-left: -20px;
+    }
+
+    #about-section {
+        flex-direction: row; /* Arrange children in a row */
+        align-items: flex-start; /* Align items to the start */
+        text-align: left; /* Align text to the left */
+        top: 200px; /* Move the section down by 200px */
+    }
+
+    #about-section img {
+        margin-right: 2em; /* Space to the right of the image */
+        margin-bottom: 0; /* Remove bottom margin */
+        width: 120%; /* Increase the width of the image */
+        height: 500px; /* Increase the height of the image */
+        transform: scale(0.6); /* Zoom out the image by 40% */
+    }
+
+    #about-section .text-container {
+        max-width: none; /* Remove max-width */
     }
 }
